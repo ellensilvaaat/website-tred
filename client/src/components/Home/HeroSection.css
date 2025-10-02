@@ -1,0 +1,84 @@
+.hero-section {
+  background-image: url('/hero.png');
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+  font-family: var(--font-heading);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: zoomBg 20s ease-in-out infinite;
+}
+
+@keyframes zoomBg {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 110%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 70px; /* abaixo do navbar */
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-family: var(--font-body); /* Inter */
+}
+
+.hero-content button {
+  background-color: var(--primary-green); /* #7DA98E */
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.hero-content button:hover {
+  background-color: #6c947b;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content button {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+}

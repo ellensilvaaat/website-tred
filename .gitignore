@@ -1,0 +1,13 @@
+# Node
+node_modules/
+.env
+
+# React
+client/dist
+client/node_modules
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
