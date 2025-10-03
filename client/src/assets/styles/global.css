@@ -13,6 +13,7 @@ html, body {
   background-color: #ffffff;
   font-family: var(--font-body);
   color: var(--text-dark);
+  margin: 0;
 }
 
 /* Remove underline dos links */
