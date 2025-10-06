@@ -1,0 +1,58 @@
+.call-to-action {
+  /* fundo gradiente da sessão */
+  background: linear-gradient(180deg, #ffffff 0%, #d8ede4 100%);
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.cta-wrapper {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden; /* para borda arredondada cortar img */
+}
+
+/* imagem */
+.cta-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+/* overlay com texto */
+.cta-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.cta-overlay h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.cta-overlay p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.cta-overlay button {
+  background-color: #6e9c89;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
