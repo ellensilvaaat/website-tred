@@ -1,47 +1,62 @@
+import { NavLink } from 'react-router-dom';
 import './Footer.css';
+import { FaInstagram, FaFacebook, FaLinkedin, FaPinterest } from 'react-icons/fa';
 
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <div className="footer-overlay">
-        <div className="footer-content">
-          <div className="footer-logo">
-            <img src="/logo.svg" alt="Logo" />
-            <p>“Quality is remembered long after price is forgotten.”<br />– Aldo Gucci</p>
+      <div className="footer-bg-decor">
+        <img src="/footer-bg.png" alt="Footer Background Decor" />
+      </div>
+
+      <div className="footer-container">
+        {/* TOPO */}
+        <div className="footer-top">
+          {/* Lado Esquerdo - Logo, frase, redes sociais */}
+          <div className="footer-left">
+            <img src="/logofooter.svg" alt="TRED Logo" className="footer-logo" />
+            <p className="footer-quote">
+              “Quality is remembered long after price is forgotten.”<br />– Aldo Gucci
+            </p>
             <div className="footer-socials">
-              <i className="ri-linkedin-line"></i>
-              <i className="ri-pinterest-line"></i>
-              <i className="ri-instagram-line"></i>
-              <i className="ri-facebook-line"></i>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer"><FaLinkedin /></a>
+              <a href="https://pinterest.com" target="_blank" rel="noreferrer"><FaPinterest /></a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer"><FaInstagram /></a>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer"><FaFacebook /></a>
             </div>
           </div>
 
-          <div className="footer-links">
-            <h4>Menu</h4>
-            <ul>
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Products</li>
-              <li>Projects</li>
-              <li>Contact Us</li>
-            </ul>
-          </div>
-
-          <div className="footer-contact">
-            <h4>Contact us</h4>
-            <p>(02) 9662 3509</p>
-            <p>Shop 10/2A Todman Ave, Kensington NSW 2033</p>
+          {/* Lado Direito - Menu e localização lado a lado */}
+          <div className="footer-right-group">
+            <div className="footer-nav">
+              <h4>Menu</h4>
+              <ul>
+                <li><NavLink to="/" end>Home</NavLink></li>
+                <li><NavLink to="/about">About Us</NavLink></li>
+                <li><NavLink to="/products">Products</NavLink></li>
+                <li><NavLink to="/projects">Projects</NavLink></li>
+                <li><NavLink to="/contact">Contact Us</NavLink></li>
+              </ul>
+            </div>
+            <div className="footer-location">
+              <h4>Contact us</h4>
+              <p>(02) 9662 3509</p>
+              <p>Shop 10/2A Todman Ave,<br />Kensington NSW 2033</p>
+            </div>
           </div>
         </div>
 
+        {/* Rodapé Legal */}
         <div className="footer-bottom">
           <span>© 2025 TRED FLOORING. ALL RIGHTS RESERVED.</span>
-          <div>
-            <span>Privacy Policy</span>
-            <span>Privacy Policy</span>
-          </div>
+          <NavLink to="/privacy" className="footer-privacy">Privacy Policy</NavLink>
         </div>
       </div>
     </footer>
   );
 }
+
+
+
+
+

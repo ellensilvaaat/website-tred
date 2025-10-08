@@ -1,55 +1,163 @@
 .site-footer {
-  background-image: url('/footer-bg.png');
-  background-size: cover;
-  background-position: center;
-  padding: 6rem 2rem 2rem;
-  color: #000;
+  position: relative;
+  width: 100%;
+}
+
+/* Fundo decorativo */
+.footer-bg-decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.footer-bg-decor img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Container branco com conteúdo do footer */
+.footer-container {
   position: relative;
   z-index: 2;
-}
-
-.footer-overlay {
-  background-color: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  padding: 3rem;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.footer-content {
+  background-color: #ffffff;
+  border-radius: 20px 20px 0 0;
+  padding: 4rem 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
 }
 
-.footer-logo img {
-  width: 120px;
+/* Topo do footer: esquerda e direita */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8rem;
+}
+
+/* Esquerda */
+.footer-left {
+  max-width: 400px;
+}
+
+.footer-logo {
+  width: 180px;
   margin-bottom: 1rem;
 }
 
-.footer-socials i {
-  font-size: 1.2rem;
-  margin-right: 1rem;
-  cursor: pointer;
+.footer-quote {
+  font-family: var(--font-body);
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-.footer-links ul {
+.footer-socials {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-socials a {
+  color: #333;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: var(--primary-green);
+}
+
+/* Direita - grupo com menu + local */
+.footer-right-group {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Menu */
+.footer-nav h4,
+.footer-location h4 {
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.footer-nav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.footer-links li {
+.footer-nav li {
   margin-bottom: 0.5rem;
-  cursor: pointer;
 }
 
+.footer-nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a.active {
+  color: var(--primary-green);
+}
+
+/* Localização */
+.footer-location p {
+  margin: 0.25rem 0;
+  font-family: var(--font-body);
+}
+
+/* Rodapé legal */
 .footer-bottom {
-  margin-top: 2rem;
-  border-top: 1px solid #ccc;
-  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1.5rem;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
   font-size: 0.9rem;
 }
+
+.footer-privacy {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.footer-privacy:hover {
+  color: var(--primary-green);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-right-group {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .footer-logo {
+    width: 140px;
+  }
+}
+
+

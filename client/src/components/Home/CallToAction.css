@@ -8,17 +8,12 @@
 
 .cta-wrapper {
   position: relative;
-  max-width: 1200px;
-  width: 100%;
-  border-radius: 20px;
-  overflow: hidden; /* para borda arredondada cortar img */
 }
 
 /* imagem */
 .cta-image {
   width: 100%;
-  height: 400px;
-  object-fit: cover;
+  height: 500px;
   display: block;
 }
 
