@@ -1,0 +1,23 @@
+.about-hero {
+  background-image: url('/about-hero.png'); 
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 4rem;
+  border-radius: 8px;
+}
+
+.overlay h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
