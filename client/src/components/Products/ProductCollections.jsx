@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './Collections.css';
+import './ProductCollections.css';
 
-const allCollections = Array.from({ length: 12 }).map((_, i) => ({
+const allProductCollections = Array.from({ length: 12 }).map((_, i) => ({
   id: i + 1,
   name: `Collection ${i + 1}`,
   type: i % 2 === 0 ? 'Solid timber' : 'Hybrid',
@@ -9,7 +9,7 @@ const allCollections = Array.from({ length: 12 }).map((_, i) => ({
   image: '/collection-placeholder.png'
 }));
 
-export default function Collections() {
+export default function ProductCollections() {
   const [searchTerm, setSearchTerm] = useState('');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [activeFilters, setActiveFilters] = useState({
@@ -17,7 +17,7 @@ export default function Collections() {
     specs: []
   });
 
-  const filtered = allCollections.filter(col => {
+  const filtered = allProductCollections.filter(col => {
     const matchesSearch = col.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesType = activeFilters.type ? col.type === activeFilters.type : true;
     const matchesSpecs = activeFilters.specs.length > 0
@@ -38,7 +38,7 @@ export default function Collections() {
     });
   };
 
-  // Fecha modal quando apertar ESC
+  // ESC key to close modal
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'Escape') {
@@ -50,14 +50,14 @@ export default function Collections() {
   }, []);
 
   return (
-    <section className="collections-section">
-      <div className="collections-container">
-        <p className="collections-intro">
+    <section className="product-collections-section">
+      <div className="product-collections-container">
+        <p className="product-collections-intro">
           Design‑led ranges in carpet, engineered and solid timber, hybrid and laminate.<br />
           Built to last, specified with care.
         </p>
 
-        <div className="collections-filter-bar">
+        <div className="product-collections-filter-bar">
           <input
             type="text"
             placeholder="Solid timber"
@@ -65,42 +65,42 @@ export default function Collections() {
             onChange={e => setSearchTerm(e.target.value)}
           />
           <div
-            className="filters-button"
+            className="product-filters-button"
             onClick={() => setFiltersOpen(true)}
           >
             Filters ▾
           </div>
-          <button className="search-button">
-  <img src="/public/search-icon.png" alt="Search" style={{ width: '20px', height: '20px' }} />
-</button>
+          <button className="product-search-button">
+            <img src="/search-icon.png" alt="Search" style={{ width: '20px', height: '20px' }} />
+          </button>
         </div>
 
-        <div className="collections-grid">
+        <div className="product-collections-grid">
           {filtered.map(col => (
-            <div key={col.id} className="collection-card">
+            <div key={col.id} className="product-collection-card">
               <div
-                className="collection-bg"
+                className="product-collection-bg"
                 style={{ backgroundImage: `url(${col.image})` }}
               />
-              <div className="collection-overlay">
+              <div className="product-collection-overlay">
                 <h3>{col.name}</h3>
                 <p>{col.type}</p>
                 <p>{col.specs.join(' / ')}</p>
-                <button className="request-button">Request samples</button>
+                <button className="product-request-button">Request samples</button>
               </div>
             </div>
           ))}
         </div>
 
-        <button className="collections-cta">Book your consultation</button>
+        <button className="product-collections-cta">Book your consultation</button>
       </div>
 
       {filtersOpen && (
-        <div className="filters-modal-backdrop" onClick={() => setFiltersOpen(false)}>
-          <div className="filters-modal" onClick={e => e.stopPropagation()}>
-            <button className="filters-close-btn" onClick={() => setFiltersOpen(false)}>×</button>
+        <div className="product-filters-modal-backdrop" onClick={() => setFiltersOpen(false)}>
+          <div className="product-filters-modal" onClick={e => e.stopPropagation()}>
+            <button className="product-filters-close-btn" onClick={() => setFiltersOpen(false)}>×</button>
             <h3>Filters</h3>
-            <div className="filter-group">
+            <div className="product-filter-group">
               <label>Type:</label>
               <select
                 value={activeFilters.type}
@@ -113,10 +113,10 @@ export default function Collections() {
                 <option value="Hybrid">Hybrid</option>
               </select>
             </div>
-            <div className="filter-group">
+            <div className="product-filter-group">
               <label>Specifications:</label>
               {['Water', 'Scratch', 'Low‑VOC', 'Acoustic'].map((spec) => (
-                <div key={spec} className="filter-checkbox-row">
+                <div key={spec} className="product-filter-checkbox-row">
                   <input
                     type="checkbox"
                     id={`spec-${spec}`}
@@ -127,13 +127,12 @@ export default function Collections() {
                 </div>
               ))}
             </div>
-            <button className="apply-filters-btn" onClick={() => setFiltersOpen(false)}>
+            <button className="product-apply-filters-btn" onClick={() => setFiltersOpen(false)}>
               Apply
             </button>
           </div>
         </div>
       )}
-
     </section>
   );
 }

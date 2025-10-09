@@ -1,34 +1,34 @@
-.why-choose-section {
+.why-tred-section {
   padding: 4rem 2rem;
   background-color: #fff;
   background-image: url('/bgChoose.png'); 
 }
 
-.container {
+.why-tred-container {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
 
-.titles{
-display: flex;
-justify-content: space-between;
-gap: 17rem;
-padding-bottom: 100px;
+.why-tred-titles {
+  display: flex;
+  justify-content: space-between;
+  gap: 17rem;
+  padding-bottom: 100px;
 }
 
-.titles h2 {
+.why-tred-titles h2 {
   font-size: 2rem;
   font-weight: 700;
   text-align: left;
   max-width: 400px;
 }
 
-.titles .highlight {
+.why-tred-titles .highlight {
   color: #7CAF8E;
 }
 
-.titles p {
+.why-tred-titles p {
   font-size: 1.1rem;
   color: #333;
   max-width: 500px;
@@ -38,7 +38,7 @@ padding-bottom: 100px;
   text-align: right;
 }
 
-.cards-grid {
+.why-tred-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -47,7 +47,7 @@ padding-bottom: 100px;
   position: relative;
 }
 
-.card {
+.why-tred-card {
   background-color: white;
   border: 2px solid #7CAF8E;
   border-radius: 16px;
@@ -58,7 +58,7 @@ padding-bottom: 100px;
   text-align: center;
 }
 
-.icon-wrapper {
+.why-tred-icon-wrapper {
   position: absolute;
   top: -30px;
   left: 50%;
@@ -66,7 +66,7 @@ padding-bottom: 100px;
   z-index: 1;
 }
 
-.icon-circle {
+.why-tred-icon-circle {
   width: 60px;
   height: 60px;
   background: linear-gradient(180deg, #7CAF8E 0%, #ffffff 100%);
@@ -77,29 +77,29 @@ padding-bottom: 100px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.icon-circle img {
+.why-tred-icon-circle img {
   width: 40px;
   height: 40px;
 }
 
-.card-content {
+.why-tred-card-content {
   margin-top: 2rem;
 }
 
-.card-content h3 {
+.why-tred-card-content h3 {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: #000;
 }
 
-.card-content p {
+.why-tred-card-content p {
   font-size: 0.9rem;
   color: #555;
   line-height: 1.5;
 }
 
-.cta-button {
+.why-tred-cta {
   background-color: #7CAF8E;
   color: white;
   padding: 0.8rem 2.5rem;
@@ -111,7 +111,7 @@ padding-bottom: 100px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-.cta-button:hover {
+.why-tred-cta:hover {
   background-color: #689f7c;
 }
 
