@@ -49,10 +49,9 @@ export default function Process() {
         </h2>
 
         <div className="process-grid">
-          {/* LEFT STEPS */}
-          <div className="steps">
+          <div className="process-steps">
             {steps.slice(0, 3).map((step, idx) => (
-              <div key={idx} className="step left">
+              <div key={idx} className="process-step process-left">
                 <h3>{step.number}</h3>
                 <h4>{step.title}<strong>{step.strong}</strong></h4>
                 <p>{step.description}</p>
@@ -60,15 +59,13 @@ export default function Process() {
             ))}
           </div>
 
-          {/* CENTER IMAGE */}
           <div className="process-image">
             <img src="/process-img.png" alt="Process illustration" />
           </div>
 
-          {/* RIGHT STEPS */}
-          <div className="steps">
+          <div className="process-steps">
             {steps.slice(3).map((step, idx) => (
-              <div key={idx} className="step right">
+              <div key={idx} className="process-step process-right">
                 <h3>{step.number}</h3>
                 <h4>{step.title}<strong>{step.strong}</strong></h4>
                 <p>{step.description}</p>
