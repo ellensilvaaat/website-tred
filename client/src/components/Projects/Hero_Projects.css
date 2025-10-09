@@ -1,5 +1,5 @@
-.about-hero {
-  background-image: url('/about-hero.png'); 
+.product-hero {
+  background-image: url('/projects-hero.png'); /* Substitua pela imagem correta */
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -9,7 +9,7 @@
   justify-content: center;
 }
 
-.overlay h1 {
+.product-overlay h1 {
   color: #fff;
   font-size: 3rem;
   font-weight: bold;
