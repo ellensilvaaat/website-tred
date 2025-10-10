@@ -5,7 +5,7 @@ export default function Hero_contact() {
   return (
     <section className="booking-hero">
       <div className="booking-overlay">
-        <h1>Flooring collections</h1>
+        <h1>Contact Us</h1>
       </div>
     </section>
   );
