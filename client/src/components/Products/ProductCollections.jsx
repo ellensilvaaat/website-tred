@@ -27,6 +27,11 @@ export default function ProductCollections() {
   const navigate = useNavigate();
   const { addSample } = useContext(SampleCartContext);
 
+  // Sempre que searchTerm ou activeFilters mudarem, resetar para a página 1
+  useEffect(() => {
+    setPage(1);
+  }, [searchTerm, activeFilters.type, activeFilters.specs.length]);
+
   const filtered = allProductCollections.filter(col => {
     const matchesSearch = col.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesType = activeFilters.type ? col.type === activeFilters.type : true;
@@ -54,6 +59,12 @@ export default function ProductCollections() {
     });
   };
 
+  // Função para limpar todos os filtros
+  const clearFilters = () => {
+    setSearchTerm('');
+    setActiveFilters({ type: '', specs: [] });
+  };
+
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'Escape') {
@@ -79,7 +90,6 @@ export default function ProductCollections() {
             value={searchTerm}
             onChange={e => {
               setSearchTerm(e.target.value);
-              setPage(1);
             }}
           />
           <div
@@ -123,8 +133,6 @@ export default function ProductCollections() {
             </div>
           ))}
         </div>
-
-        {/* Removido botão extra no final — não incluí “Book your consultation” */}
 
         <div className="product-pagination">
           <button
@@ -188,13 +196,27 @@ export default function ProductCollections() {
                 </div>
               ))}
             </div>
-            <button className="product-apply-filters-btn" onClick={() => setFiltersOpen(false)}>
-              Apply
-            </button>
+            <div className="product-filter-actions">
+              <button
+                className="product-clear-filters-btn"
+                onClick={() => {
+                  clearFilters();
+                }}
+              >
+                Clear
+              </button>
+              <button
+                className="product-apply-filters-btn"
+                onClick={() => {
+                  setFiltersOpen(false);
+                }}
+              >
+                Apply
+              </button>
+            </div>
           </div>
         </div>
       )}
     </section>
   );
 }
-
