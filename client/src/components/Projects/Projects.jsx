@@ -66,14 +66,11 @@ export default function Projects() {
             <div className="proj-content">
               <h3>{proj.title}</h3>
               <p>{proj.description}</p>
-              <Link to={`/projects/${proj.id}`} className="proj-btn">Ver mais</Link>
+              <Link to={`/projects/${proj.id}`} className="proj-btn">See more</Link>
             </div>
           </div>
         ))}
       </div>
-
-      {/* Botão de consulta */}
-      <button className="proj-cta">Book your consultation</button>
 
       <div className="proj-pagination">
         <button

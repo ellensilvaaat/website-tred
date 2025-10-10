@@ -1,5 +1,5 @@
-.projects-hero {
-  background-image: url('/projects-hero.png'); /* Substitua pela imagem correta */
+.booking-hero {
+  background-image: url('/contact-hero.png'); /* Substitua pela imagem correta */
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -9,7 +9,7 @@
   justify-content: center;
 }
 
-.projects-overlay h1 {
+.booking-overlay h1 {
   color: #fff;
   font-size: 3rem;
   font-weight: bold;

@@ -1,0 +1,12 @@
+.project-wide-text {
+  padding: 3rem 2rem;
+}
+
+.wide-text-container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.wide-text-container p {
+  line-height: 1.7;
+}

@@ -1,0 +1,92 @@
+/* Estilo compartilhado para CartPreview + RequestForm + página */
+
+.sample-request-page {
+  padding: 4rem 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.sample-request-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.sample-cart {
+  margin-bottom: 2rem;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.sample-cart h2 {
+  margin-bottom: 1rem;
+}
+
+.sample-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.sample-item span {
+  font-size: 1rem;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.sample-form .form-group {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sample-form label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.sample-form input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  background-color: #7CAF8E;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #689f7c;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #7CAF8E;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}

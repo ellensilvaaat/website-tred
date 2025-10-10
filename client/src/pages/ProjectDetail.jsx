@@ -1,13 +1,22 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import HeroProjectDetail from '../components/ProjectDetail/HeroProjectDetail';
+import InfoSection from '../components/ProjectDetail/InfoSection';
+import FullTextSection from '../components/ProjectDetail/FullTextSection';
+import ImageGallery from '../components/ProjectDetail/ImageGallery';
+import FinalTextSection from '../components/ProjectDetail/FinalTextSection';
+import ThreeImageRow from '../components/ProjectDetail/ThreeImageRow';
+import Footer from '../components/Home/Footer';
 
-export default function ProjectDetail() {
-  const { id } = useParams();
-
+export default function ProjectDetailPage() {
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Project #{id}</h1>
-      <p>Detalhes do projeto virão aqui futuramente.</p>
+    <div className="project-detail-page">
+      <HeroProjectDetail />
+      <InfoSection />
+      <FullTextSection />
+      <ImageGallery />
+      <FinalTextSection />
+      <ThreeImageRow />
+      <Footer />
     </div>
   );
 }

@@ -1,13 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import './ProductCollections.css';
+// src/components/Products/ProductCollections.jsx
 
-const allProductCollections = Array.from({ length: 12 }).map((_, i) => ({
+import React, { useState, useEffect, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './ProductCollections.css';
+import { SampleCartContext } from '../../contexts/SampleCartContext';
+
+const allProductCollections = Array.from({ length: 16 }).map((_, i) => ({
   id: i + 1,
-  name: `Collection ${i + 1}`,
+  name: `Product ${i + 1}`,
   type: i % 2 === 0 ? 'Solid timber' : 'Hybrid',
   specs: ['Water', 'Scratch', 'Low‑VOC', 'Acoustic'].slice(0, 3),
   image: '/collection-placeholder.png'
 }));
+
+const ITEMS_PER_PAGE = 12;
 
 export default function ProductCollections() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,6 +22,10 @@ export default function ProductCollections() {
     type: '',
     specs: []
   });
+  const [page, setPage] = useState(1);
+
+  const navigate = useNavigate();
+  const { addSample } = useContext(SampleCartContext);
 
   const filtered = allProductCollections.filter(col => {
     const matchesSearch = col.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -25,6 +35,12 @@ export default function ProductCollections() {
       : true;
     return matchesSearch && matchesType && matchesSpecs;
   });
+
+  const pageCount = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const paginated = filtered.slice(
+    (page - 1) * ITEMS_PER_PAGE,
+    page * ITEMS_PER_PAGE
+  );
 
   const toggleFilterSpec = (spec) => {
     setActiveFilters(prev => {
@@ -38,7 +54,6 @@ export default function ProductCollections() {
     });
   };
 
-  // ESC key to close modal
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'Escape') {
@@ -62,7 +77,10 @@ export default function ProductCollections() {
             type="text"
             placeholder="Solid timber"
             value={searchTerm}
-            onChange={e => setSearchTerm(e.target.value)}
+            onChange={e => {
+              setSearchTerm(e.target.value);
+              setPage(1);
+            }}
           />
           <div
             className="product-filters-button"
@@ -76,7 +94,7 @@ export default function ProductCollections() {
         </div>
 
         <div className="product-collections-grid">
-          {filtered.map(col => (
+          {paginated.map(col => (
             <div key={col.id} className="product-collection-card">
               <div
                 className="product-collection-bg"
@@ -86,13 +104,56 @@ export default function ProductCollections() {
                 <h3>{col.name}</h3>
                 <p>{col.type}</p>
                 <p>{col.specs.join(' / ')}</p>
-                <button className="product-request-button">Request samples</button>
+                <button
+                  className="product-request-button"
+                  onClick={() => {
+                    addSample({
+                      id: col.id,
+                      name: col.name,
+                      type: col.type,
+                      specs: col.specs,
+                      image: col.image
+                    });
+                    navigate('/request-samples');
+                  }}
+                >
+                  Request samples
+                </button>
               </div>
             </div>
           ))}
         </div>
 
-        <button className="product-collections-cta">Book your consultation</button>
+        {/* Removido botão extra no final — não incluí “Book your consultation” */}
+
+        <div className="product-pagination">
+          <button
+            className="page-arrow"
+            onClick={() => setPage(p => Math.max(p - 1, 1))}
+            disabled={page === 1}
+          >
+            ‹
+          </button>
+          {Array.from({ length: pageCount }).map((_, idx) => {
+            const pageNum = idx + 1;
+            return (
+              <button
+                key={pageNum}
+                className={`page-num ${page === pageNum ? 'active' : ''}`}
+                onClick={() => setPage(pageNum)}
+              >
+                {pageNum}
+              </button>
+            );
+          })}
+          <button
+            className="page-arrow"
+            onClick={() => setPage(p => Math.min(p + 1, pageCount))}
+            disabled={page === pageCount}
+          >
+            ›
+          </button>
+        </div>
       </div>
 
       {filtersOpen && (
@@ -115,7 +176,7 @@ export default function ProductCollections() {
             </div>
             <div className="product-filter-group">
               <label>Specifications:</label>
-              {['Water', 'Scratch', 'Low‑VOC', 'Acoustic'].map((spec) => (
+              {['Water', 'Scratch', 'Low‑VOC', 'Acoustic'].map(spec => (
                 <div key={spec} className="product-filter-checkbox-row">
                   <input
                     type="checkbox"
@@ -136,3 +197,4 @@ export default function ProductCollections() {
     </section>
   );
 }
+

@@ -1,0 +1,31 @@
+.project-intro {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 1 1 400px;
+}
+
+.intro-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  line-height: 1.6;
+}
+
+.intro-image {
+  flex: 1 1 300px;
+}
+
+.intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}

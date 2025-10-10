@@ -95,7 +95,8 @@
   flex-direction: column;
   justify-content: flex-end;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; 
+  border-radius: 25px;
 }
 
 .product-collection-card:hover .product-collection-overlay {
@@ -216,4 +217,42 @@
   border-radius: 8px;
   cursor: pointer;
   width: 100%;
+}
+
+.product-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.page-num {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #666;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-num.active {
+  background-color: #7CAF8E;
+  color: white;
+  border-radius: 4px;
+}
+
+.page-arrow {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #999;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.page-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
 }

@@ -1,0 +1,18 @@
+.project-three-images {
+  padding: 3rem 2rem;
+}
+
+.three-img-flex {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.three-img-flex img {
+  flex: 1 1 calc(33.33% - 1rem);
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
