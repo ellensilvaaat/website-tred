@@ -37,10 +37,11 @@ export default function RequestForm({ form, onChange, onSubmit }) {
           required
         />
       </div>
-
+<div className="bnt-sub">
       <button type="submit" className="submit-btn">
         Submit Request
       </button>
+      </div>
     </form>
   );
 }

@@ -4,6 +4,8 @@ import { SampleCartContext } from '../contexts/SampleCartContext';
 import CartPreview from '../components/RequestCart/CartPreview';
 import RequestForm from '../components/RequestCart/RequestForm';
 import '../components/RequestCart/SampleRequestPage.css';
+import Hero_Samples from '../components/RequestCart/Hero_Samples';
+import Footer from '../components/Home/Footer';
 
 export default function SampleRequestPage() {
   const navigate = useNavigate();
@@ -41,6 +43,7 @@ export default function SampleRequestPage() {
 
   return (
     <div className="sample-request-page">
+    <Hero_Samples />
       <div className="sample-request-container">
         <h1>Request Samples</h1>
 
@@ -59,7 +62,9 @@ export default function SampleRequestPage() {
           onSubmit={handleSubmit}
         />
       </div>
+      <Footer />
     </div>
+
   );
 }
 

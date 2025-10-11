@@ -1,14 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import SampleRequestPage from './pages/SampleRequestPage';
-import ProjectDetail from './pages/ProjectDetail'; // ✅ alterado
-
+import ProjectDetail from './pages/ProjectDetail';
 import { SampleCartProvider } from './contexts/SampleCartContext';
 
 export default function App() {
