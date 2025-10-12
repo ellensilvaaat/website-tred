@@ -10,7 +10,7 @@ export default function UploadRoom() {
       <div className="upload-room__text">
         <h2>Check out our products in your room!</h2>
         <p>
-          Add a photo, select a product from the catalog,<br />
+          Add a photo, select a product from the catalog, <span className="mobile-hide-br"><br /></span>
           and see how it will look in your room!
         </p>
       </div>

@@ -59,3 +59,26 @@
    }
 }
 
+@media (min-width: 501px) and (max-width: 900px) {
+.upload-room__text h2{
+    font-size: 1.1rem;
+   }
+
+   .upload-room__text p{
+    font-size: 0.7rem;
+   }
+
+   .upload-box p{
+    font-size: 0.8rem;
+   }
+
+   .upload-room{
+    flex-wrap: nowrap;
+   }
+   
+   .mobile-hide-br {
+        display: none;
+  }
+}
+
+
