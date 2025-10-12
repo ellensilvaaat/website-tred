@@ -11,7 +11,7 @@ export default function CallToAction() {
             Book a measure and a no-obligation quote. A specialist guides you
             from specification to install, zero guesswork.
           </p>
-          <button>Talk to a Specialist</button>
+          <button onClick={() => window.location.href = '/contact'}>Talk to a Specialist</button>
         </div>
       </div>
     </section>

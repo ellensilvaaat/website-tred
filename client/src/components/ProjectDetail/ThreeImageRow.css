@@ -1,5 +1,6 @@
 .project-three-images {
   padding: 3rem 2rem;
+  background: linear-gradient(to bottom, #fff 0%, #eaf4ef 100%);
 }
 
 .three-img-flex {
@@ -15,4 +16,10 @@
   height: auto;
   border-radius: 8px;
   object-fit: cover;
+}
+
+@media (max-width: 500px){
+.project-three-images{
+  padding: 0 1rem 2rem;
+}
 }

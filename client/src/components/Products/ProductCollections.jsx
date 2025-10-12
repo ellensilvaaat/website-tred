@@ -79,7 +79,7 @@ export default function ProductCollections() {
     <section className="product-collections-section">
       <div className="product-collections-container">
         <p className="product-collections-intro">
-          Design‑led ranges in carpet, engineered and solid timber, hybrid and laminate.<br />
+          Design‑led ranges in carpet, engineered and solid timber, hybrid and laminate.<span className="mobile-hide-br"><br /></span>
           Built to last, specified with care.
         </p>
 
@@ -170,7 +170,7 @@ export default function ProductCollections() {
             <button className="product-filters-close-btn" onClick={() => setFiltersOpen(false)}>×</button>
             <h3>Filters</h3>
             <div className="product-filter-group">
-              <label>Type:</label>
+              <label className="product-filter-type">Type:</label>
               <select
                 value={activeFilters.type}
                 onChange={e =>
@@ -180,10 +180,11 @@ export default function ProductCollections() {
                 <option value="">All</option>
                 <option value="Solid timber">Solid timber</option>
                 <option value="Hybrid">Hybrid</option>
+                <option value="Hybrid">Engineered timber</option>
               </select>
             </div>
             <div className="product-filter-group">
-              <label>Specifications:</label>
+              <label className="product-filter-gp">Specifications:</label>
               {['Water', 'Scratch', 'Low‑VOC', 'Acoustic'].map(spec => (
                 <div key={spec} className="product-filter-checkbox-row">
                   <input

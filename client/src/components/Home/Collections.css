@@ -14,7 +14,7 @@
 
   .title {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   position: relative;
   color: var(--text-dark);
 }
@@ -76,6 +76,35 @@
   transform: scale(1.1);
 }
 
+@media (max-width: 500px){
+  .collections-header{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .title{
+    margin-bottom: 1.8rem;
+  }
+
+  .subtitle{
+    text-align: center;
+  }
+
+  .mobile-hide-br {
+    display: none;
+  }
+
+  .nav-arrow{
+    display: none;
+  }
+
+  .collections-section{
+    padding: 2rem 0 3rem 0;
+  }
+}
 /* adaptações responsivas */
 @media (max-width: 1024px) {
   .collections-gallery {

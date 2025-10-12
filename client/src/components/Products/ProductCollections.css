@@ -164,22 +164,24 @@
 
 .product-filters-modal {
   background: white;
-  padding: 2rem;
+  padding: 3rem 1rem 2rem 1rem;
   border-radius: 12px;
   max-width: 90%;
   width: 320px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
   position: relative;
+  text-align: center;
 }
 
 .product-filters-close-btn {
   position: absolute;
   top: 0.5rem;
-  right: 0.5rem;
+  right: 1.5rem;
   font-size: 1.5rem;
   border: none;
   background: none;
   cursor: pointer;
+  color: #7CAF8E;
 }
 
 .product-filters-modal h3 {
@@ -189,20 +191,32 @@
 }
 
 .product-filter-group {
-  margin-bottom: 1.5rem;
-  text-align: left;
+  text-align: center;
 }
 
+.product-filter-gp{
+  padding: 1rem 0 ;
+}
+.product-filter-group select{
+  border-color: #699f7e;
+  border-radius: 15px;
+  padding: 0.3rem;
+}
 .product-filter-group label {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-weight: 400;
   display: block;
+  font-size: 1rem;
+}
+.product-filter-type{
+  padding-bottom: 0.6rem;
 }
 
 .product-filter-checkbox-row {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin: auto;
+  justify-content: center;
 }
 
 .product-filter-checkbox-row input {
@@ -216,7 +230,13 @@
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   cursor: pointer;
-  width: 100%;
+  width: 70%;
+  margin: auto;
+}
+
+.product-filter-actions{
+  display: flex;
+  flex-direction: column;
 }
 
 .product-pagination {
@@ -255,4 +275,16 @@
 .page-arrow:disabled {
   opacity: 0.3;
   cursor: default;
+}
+
+.product-clear-filters-btn{
+  color: #7CAF8E;
+  text-decoration: solid;
+  padding-bottom: 2.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.product-clear-filters-btn:hover {
+  text-decoration: underline;
 }

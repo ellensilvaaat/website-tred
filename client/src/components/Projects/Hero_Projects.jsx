@@ -5,7 +5,7 @@ export default function Hero_projects() {
   return (
     <section className="projects-hero">
       <div className="projects-overlay">
-        <h1>Flooring collections</h1>
+        <h1>Projects</h1>
       </div>
     </section>
   );

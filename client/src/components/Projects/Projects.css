@@ -149,3 +149,23 @@
   font-weight: 500;
   font-size: 1rem;
 }
+
+@media (max-width: 500px){
+
+.proj-filter-buttons{
+  gap: 0.5rem;
+}
+
+.proj-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-content h3{
+  font-size: 1.1rem;
+}
+
+.proj-content p{
+  font-size: 0.9rem;
+}
+}

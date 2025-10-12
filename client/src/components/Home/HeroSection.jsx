@@ -8,7 +8,7 @@ export default function HeroSection() {
           <h1>Floors that feel like home</h1>
           <p>One team to specify, supply and install.</p>
           <button onClick={() => window.location.href = '/products'}>
-            Explore Collections
+            Explore Products
           </button>
         </div>
       </div>

@@ -44,3 +44,18 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+@media (max-width: 500px) {
+   .upload-room__text h2{
+    font-size: 1.5rem;
+   }
+
+   .upload-room__text p{
+    font-size: 0.9rem;
+   }
+
+   .upload-box p{
+    font-size: 0.8rem;
+   }
+}
+

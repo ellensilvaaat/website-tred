@@ -24,3 +24,9 @@
   margin: 0;
   z-index: 1;
 }
+
+@media (max-width: 500px){
+.projectDetail-heroo .projectDetail-hero-overlay h1{
+  font-size: 1.8rem;
+}
+}

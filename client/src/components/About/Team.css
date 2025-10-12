@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 .team-section {
-  padding: 5rem 0 5rem 0;
+  padding: 5rem 0 7rem 0;
   background-color: #fff;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
@@ -44,14 +44,12 @@
   overflow-x: auto;
   padding-bottom: 1rem;
   padding-top: 3rem;
-
-  /* 🟢 Esconde a scrollbar */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 
 .team-cards-wrapper::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+  display: none; 
 }
 
 .team-cards {
@@ -64,7 +62,7 @@
 .team-card {
   border-radius: 25px;
   width: 300px;
-  height: 370px;
+  height: 350px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -108,7 +106,7 @@
 }
 
 .card-overlay h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
@@ -119,3 +117,19 @@
   white-space: pre-line;
 }
 
+@media (max-width: 500px) {
+  .team-title{
+    margin-bottom: 1.8rem;
+    font-size: 1.8rem;
+  }
+
+  .team-section{
+    padding: 5rem 0 5rem 0;
+  }
+
+  .team-subtitle{
+    font-size: 0.9rem;
+    max-width: 300px;
+    margin: auto;
+  }
+}

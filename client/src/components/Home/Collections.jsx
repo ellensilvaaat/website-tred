@@ -29,7 +29,7 @@ export default function Collections() {
     <section className="collections-section">
       <div className="collections-header">
         <h2 className="title">Collections</h2>
-        <p className="subtitle">Refined surfaces for every project, <br />
+        <p className="subtitle">Refined surfaces for every project, <span className="mobile-hide-br"><br /></span>
         from specification to installation.</p>
       </div>
 

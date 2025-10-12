@@ -8,7 +8,7 @@ export default function Testimonials() {
     <section className="testimonials-section">
       {/* Texto à esquerda */}
       <div className="testimonials-text">
-        <h2>What Our<br />Clients Are<br />Saying</h2>
+        <h2>What Our <span className="mobile-hide-br"><br /></span>Clients Are<span className="mobile-hide-br"><br /></span> Saying</h2>
       </div>
 
       {/* Cards de avaliação */}

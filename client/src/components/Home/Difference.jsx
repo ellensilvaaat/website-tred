@@ -1,9 +1,11 @@
+import React from 'react';
 import './Difference.css';
 
 export default function Difference() {
   return (
     <section className="difference-section">
-         <img src="/bg.png" alt="Background" className="difference-bg" />
+      <img src="/bg.png" alt="Background" className="difference-bg desktop-bg" />
+      <img src="/bg-mobile.jpg" alt="Background mobile" className="difference-bg mobile-bg" />
       <div className="difference-inner">
         <h2 className="difference-title">
           The <span className="highlight">Tred</span><br />
@@ -14,7 +16,7 @@ export default function Difference() {
           <div className="step">
             <div className="step-number">01</div>
             <div className="step-content">
-              <div className="step-heading">One team, <br/> <span>end-to-end</span></div>
+              <div className="step-heading">One team, <br/><span>end-to-end</span></div>
               <div className="step-text">
                 Design, selections, approvals, build, and handover under one roof.
               </div>
@@ -24,7 +26,7 @@ export default function Difference() {
           <div className="step">
             <div className="step-number">02</div>
             <div className="step-content">
-              <div className="step-heading">One team,<br/> <span>end-to-end</span></div>
+              <div className="step-heading">One team, <br/><span>end-to-end</span></div>
               <div className="step-text">
                 Design, selections, approvals, build, and handover under one roof.
               </div>
@@ -34,7 +36,7 @@ export default function Difference() {
           <div className="step">
             <div className="step-number">03</div>
             <div className="step-content">
-              <div className="step-heading">One team,<br/> <span>end-to-end</span></div>
+              <div className="step-heading">One team, <br/><span>end-to-end</span></div>
               <div className="step-text">
                 Design, selections, approvals, build, and handover under one roof.
               </div>
@@ -44,7 +46,7 @@ export default function Difference() {
           <div className="step">
             <div className="step-number">04</div>
             <div className="step-content">
-              <div className="step-heading">One team,<br/> <span>end-to-end</span></div>
+              <div className="step-heading">One team, <br/><span>end-to-end</span></div>
               <div className="step-text">
                 Design, selections, approvals, build, and handover under one roof.
               </div>
@@ -52,7 +54,9 @@ export default function Difference() {
           </div>
         </div>
 
-        <button className="difference-cta">Talk to a specialist</button>
+        <button className="difference-cta" onClick={() => window.location.href = '/contact'}>
+          Talk to a specialist
+        </button>
       </div>
     </section>
   );

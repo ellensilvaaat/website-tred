@@ -13,6 +13,7 @@
 
 .sample-request-container h1{
   padding-bottom: 2rem;
+  text-align: center;
 }
 
 
@@ -21,14 +22,18 @@
   border: 1px solid #7CAF8E;
   padding: 1rem;
   border-radius: 8px;
+  width: 60%;
+  margin: auto;
 }
 
 .sample-cart h2 {
   margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 .sample-cart p {
   padding: 1rem 0 1rem 0;
+  font-size: 1rem;
 }
 
 .sample-item {
@@ -111,4 +116,21 @@
 
 .back-btn:hover {
   text-decoration: underline;
+}
+
+.extra-buttons{
+  margin: auto;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+@media (max-width: 500px){
+  .sample-request-container h1{
+    font-size: 1.8rem;
+  }
+
+  .bnt-sub{
+    width: 45%;
+    text-align: center;
+  }
 }
