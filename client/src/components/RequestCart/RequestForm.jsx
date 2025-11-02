@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './SampleRequestPage.css';
 
 export default function RequestForm({ form, onChange, onSubmit }) {
-  const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    phone: ''
-  });
+  const [errors, setErrors] = useState({ name: '', email: '', phone: '' });
 
   const validate = () => {
     const newErrors = { name: '', email: '', phone: '' };
@@ -33,11 +29,10 @@ export default function RequestForm({ form, onChange, onSubmit }) {
     return valid;
   };
 
-  // intercepta submit original vindo da prop
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      onSubmit(e); // chama o submit original apenas se estiver válido
+      onSubmit(e);
     }
   };
 
@@ -90,3 +85,4 @@ export default function RequestForm({ form, onChange, onSubmit }) {
     </form>
   );
 }
+
