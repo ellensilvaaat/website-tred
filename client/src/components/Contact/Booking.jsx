@@ -58,7 +58,7 @@ export default function Booking() {
     e.preventDefault();
     if (!validate()) return;
 
-    const apiUrl = import.meta.env.VITE_API_URL;  // pega da variável de ambiente
+    const apiUrl = import.meta.env.VITE_API_URL;
 
     try {
       const response = await fetch(`${apiUrl}/sample`, {
@@ -103,28 +103,115 @@ export default function Booking() {
           </p>
           <div className="contact-block">
             <p>📍 <strong>Visit Us</strong></p>
-            <p><strong>Moore Park</strong><br />Shop 10/2A Todman Ave, Kensington NSW 2033</p>
-            <p><strong>Phone:</strong> (02) 9662 3509</p>
+            <p>Supa Centa Moore , Ground Floor<br />2a Todman Ave, Kensington</p>
+            <p><strong>Phone:</strong> (02) 8542 2249</p>
           </div>
           <div className="contact-block">
             <p>📧 <strong>Email Us</strong></p>
             <p>info@tredflooring.com.au</p>
           </div>
         </div>
+
         <form className="booking-form" onSubmit={handleSubmit}>
-          {/* … seus campos de formulário … */}
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+              />
+              {errors.name && <span className="error">{errors.name}</span>}
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+              />
+              {errors.email && <span className="error">{errors.email}</span>}
+            </div>
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="address">Address</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                value={form.address}
+                onChange={handleChange}
+              />
+              {errors.address && <span className="error">{errors.address}</span>}
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="phone">Phone</label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                value={form.phone}
+                onChange={handleChange}
+              />
+              {errors.phone && <span className="error">{errors.phone}</span>}
+            </div>
+          </div>
+
+          <div className="form-row">
+            <div className="form-group">
+              <label htmlFor="area">Area</label>
+              <select
+                id="area"
+                name="area"
+                value={form.area}
+                onChange={handleChange}
+              >
+                <option value="Living">Living</option>
+                <option value="Bedroom">Bedroom</option>
+                <option value="Kitchen">Kitchen</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="flooring">Flooring</label>
+              <select
+                id="flooring"
+                name="flooring"
+                value={form.flooring}
+                onChange={handleChange}
+              >
+                <option value="Carpet">Carpet</option>
+                <option value="Hardwood">Hardwood</option>
+                <option value="Vinyl">Vinyl</option>
+                <option value="Laminate">Laminate</option>
+              </select>
+            </div>
+          </div>
+
           <div className="form-group full-width">
-            <label>Tell us about your project</label>
+            <label htmlFor="message">Tell us about your project</label>
             <textarea
+              id="message"
               rows="4"
               name="message"
               value={form.message}
               onChange={handleChange}
             />
           </div>
+
           <button type="submit" className="submit-btn">Submit</button>
         </form>
       </div>
     </section>
   );
 }
+

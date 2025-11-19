@@ -39,8 +39,8 @@ export default function Footer() {
             </div>
             <div className="footer-location">
               <h4>Contact us</h4>
-              <p>(02) 9662 3509</p>
-              <p>Shop 10/2A Todman Ave,<br />Kensington NSW 2033</p>
+              <p>(02) 8542 2249</p>
+              <p>Supa Centa Moore , Ground Floor<br />2a Todman Ave, Kensington</p>
             </div>
           </div>
         </div>
