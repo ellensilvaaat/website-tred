@@ -4,7 +4,7 @@ export default function CallToAction() {
   return (
     <section className="call-to-action">
       <div className="cta-wrapper">
-        <img src="/cta-background.png" alt="Room" className="cta-image" />
+        <img src="/cta-background.jpg" alt="Room" className="cta-image" />
         <div className="cta-overlay">
           <h2>Ready to begin?</h2>
           <p>

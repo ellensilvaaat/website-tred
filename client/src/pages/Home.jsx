@@ -1,6 +1,6 @@
 import HeroSection from '../components/Home/HeroSection';
 import Collections from '../components/Home/Collections';
-import FinishFilters from '../components/Home/FinishFilters';
+import ServicesShowcase from '../components/Home/ServicesShowcase';
 import Difference from '../components/Home/Difference';
 import FeaturedProjects from '../components/Home/FeaturedProjects';
 import Testimonials from '../components/Home/Testimonials';
@@ -15,7 +15,7 @@ export default function Home() {
     <main>
       <HeroSection />
       <Collections />
-      <FinishFilters />
+      <ServicesShowcase />
       <Difference />
       <FeaturedProjects/>
       <Testimonials />

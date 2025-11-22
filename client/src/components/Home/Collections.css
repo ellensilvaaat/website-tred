@@ -9,10 +9,14 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 0 60px 100px 60px;
+  padding: 0 60px 80px 60px;
 }
 
-  .title {
+.nav-arrow{
+  padding: 0 25px;
+}
+
+.title {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   position: relative;
@@ -46,23 +50,31 @@
 .collections-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  overflow: hidden;
+  gap: 10px;
 }
+
 
 .collection-card {
   position: relative;
-  overflow: hidden;
-  border-radius: 12px;
   background-color: transparent;
   transition: transform 0.3s ease;
+  max-width: 220px;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .collection-card img {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.collection-card:hover img {
+  transform: scale(1.05);
 }
 
 .collection-card .card-title {
@@ -71,41 +83,7 @@
   color: var(--text-dark);
 }
 
-/* efeito zoom ao passar o mouse */
-.collection-card:hover img {
-  transform: scale(1.1);
-}
-
-@media (max-width: 500px){
-  .collections-header{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin-bottom: 2.5rem;
-  }
-
-  .title{
-    margin-bottom: 1.8rem;
-  }
-
-  .subtitle{
-    text-align: center;
-  }
-
-  .mobile-hide-br {
-    display: none;
-  }
-
-  .nav-arrow{
-    display: none;
-  }
-
-  .collections-section{
-    padding: 2rem 0 3rem 0;
-  }
-}
-/* adaptações responsivas */
+/* Responsivo */
 @media (max-width: 1024px) {
   .collections-gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -115,5 +93,33 @@
 @media (max-width: 600px) {
   .collections-gallery {
     grid-template-columns: 1fr;
+  }
+
+  .collections-header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  .title {
+    margin-bottom: 1.8rem;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .mobile-hide-br {
+    display: none;
+  }
+
+  .nav-arrow {
+    display: none;
+  }
+
+  .collections-section {
+    padding: 2rem 0 3rem 0;
   }
 }

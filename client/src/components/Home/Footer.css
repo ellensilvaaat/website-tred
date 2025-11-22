@@ -125,19 +125,26 @@
   font-size: 0.7rem;
 }
 
-.footer-privacy {
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
   text-decoration: none;
   color: #333;
+  font-size: 0.7rem;
   transition: color 0.3s ease;
 }
 
-.footer-privacy:hover {
+.footer-links a:hover {
   color: var(--primary-green);
 }
 
 /* Responsivo */
 @media (max-width: 500px) {
-  .footer-nav{
+  .footer-nav {
     display: none;
   }
 
@@ -164,44 +171,40 @@
     margin: auto;
   }
 
-  .footer-container{
+  .footer-container {
     padding: 0 1rem 1rem;
   }
-  
-  .footer-quote{
+
+  .footer-quote {
     font-size: 0.7rem;
     text-align: center;
   }
 
-  .footer-left{
+  .footer-left {
     width: 100%;
   }
 
-  .footer-social{
-    margin: auto;
-  }
-
-  .footer-socials{
+  .footer-socials {
     margin: auto;
     justify-content: center;
     gap: 1rem;
   }
 
-  .footer-socials a{
+  .footer-socials a {
     font-size: 1.2rem;
   }
 
-  .footer-location h4{
+  .footer-location h4 {
     font-size: 0.9rem;
     text-align: center;
   }
 
-  .footer-location p{
+  .footer-location p {
     font-size: 0.7rem;
     text-align: center;
   }
 
-  .footer-location{
+  .footer-location {
     margin: auto;
   }
 }
@@ -227,5 +230,6 @@
     width: 140px;
   }
 }
+
 
 

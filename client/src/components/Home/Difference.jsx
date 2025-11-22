@@ -6,6 +6,7 @@ export default function Difference() {
     <section className="difference-section">
       <img src="/bg.png" alt="Background" className="difference-bg desktop-bg" />
       <img src="/bg-mobile.jpg" alt="Background mobile" className="difference-bg mobile-bg" />
+      <div className="difference-overlay" />
       <div className="difference-inner">
         <h2 className="difference-title">
           The <span className="highlight">Tred</span><br />
@@ -16,9 +17,9 @@ export default function Difference() {
           <div className="step">
             <div className="step-number">01</div>
             <div className="step-content">
-              <div className="step-heading">One team, <br/><span>end-to-end</span></div>
+              <div className="step-heading">Customised <br /><span>Flooring Solutions</span></div>
               <div className="step-text">
-                Design, selections, approvals, build, and handover under one roof.
+                We offer tailored timber flooring and finishes to suit every aesthetic and lifestyle.
               </div>
             </div>
           </div>
@@ -26,9 +27,9 @@ export default function Difference() {
           <div className="step">
             <div className="step-number">02</div>
             <div className="step-content">
-              <div className="step-heading">One team, <br/><span>end-to-end</span></div>
+              <div className="step-heading">Design & <br /><span>Installation</span></div>
               <div className="step-text">
-                Design, selections, approvals, build, and handover under one roof.
+                From design consultation to flawless installation, everything is handled by our team.
               </div>
             </div>
           </div>
@@ -36,9 +37,9 @@ export default function Difference() {
           <div className="step">
             <div className="step-number">03</div>
             <div className="step-content">
-              <div className="step-heading">One team, <br/><span>end-to-end</span></div>
+              <div className="step-heading">Beyond Floors: <br /><span>Complete Interiors</span></div>
               <div className="step-text">
-                Design, selections, approvals, build, and handover under one roof.
+                TV units, custom rugs, wall panels, pavers & more. All in one curated space.
               </div>
             </div>
           </div>
@@ -46,9 +47,9 @@ export default function Difference() {
           <div className="step">
             <div className="step-number">04</div>
             <div className="step-content">
-              <div className="step-heading">One team, <br/><span>end-to-end</span></div>
+              <div className="step-heading">Sustainably <br /><span>Sourced</span></div>
               <div className="step-text">
-                Design, selections, approvals, build, and handover under one roof.
+                We work with responsibly sourced materials for eco-conscious flooring solutions.
               </div>
             </div>
           </div>
@@ -61,3 +62,4 @@ export default function Difference() {
     </section>
   );
 }
+

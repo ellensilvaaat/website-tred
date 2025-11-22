@@ -1,36 +1,42 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Collections.css';
 
-const dummyData = [
-  { id: 1, title: 'Tile 1', img: '/placeholder.png' },
-  { id: 2, title: 'Tile 2', img: '/placeholder.png' },
-  { id: 3, title: 'Tile 3', img: '/placeholder.png' },
-  { id: 4, title: 'Tile 4', img: '/placeholder.png' },
-  { id: 5, title: 'Tile 5', img: '/placeholder.png' },
-  { id: 6, title: 'Tile 6', img: '/placeholder.png' },
-  { id: 7, title: 'Tile 7', img: '/placeholder.png' },
-  { id: 8, title: 'Tile 8', img: '/placeholder.png' },
+const collectionsData = [
+  { id: 1, title: 'Hardwood Collection',   img: '/collections/hardwood-collection.jpg', slug: 'hardwood-collection' },
+  { id: 2, title: 'Prestige Oak',         img: '/collections/Prestige-Oak.jpg',        slug: 'prestige-oak'       },
+  { id: 3, title: 'Herringbone',           img: '/collections/Herringbone.jpg',         slug: 'herringbone'         },
+  { id: 4, title: 'Chevron',               img: '/collections/Chevron.jpg',             slug: 'chevron'             },
+  { id: 5, title: 'Village Oak',           img: '/collections/Village-Oak.jpg',         slug: 'village-oak'         },
+  { id: 6, title: 'Australian Timber',     img: '/collections/Australian-Timber.jpg',   slug: 'australian-timber'   },
 ];
 
 export default function Collections() {
   const [startIndex, setStartIndex] = useState(0);
   const visibleCount = 4;
+  const navigate = useNavigate();
 
   const prev = () => {
     setStartIndex(i => Math.max(i - 1, 0));
   };
   const next = () => {
-    setStartIndex(i => Math.min(i + 1, dummyData.length - visibleCount));
+    setStartIndex(i => Math.min(i + 1, collectionsData.length - visibleCount));
   };
 
-  const visibleItems = dummyData.slice(startIndex, startIndex + visibleCount);
+  const visibleItems = collectionsData.slice(startIndex, startIndex + visibleCount);
+
+  const handleClick = (slug) => {
+    navigate(`/collections/${slug}`);
+  };
 
   return (
     <section className="collections-section">
       <div className="collections-header">
         <h2 className="title">Collections</h2>
-        <p className="subtitle">Refined surfaces for every project, <span className="mobile-hide-br"><br /></span>
-        from specification to installation.</p>
+        <p className="subtitle">
+          Refined surfaces for every project, <span className="mobile-hide-br"><br /></span>
+          from specification to installation.
+        </p>
       </div>
 
       <div className="collections-gallery-wrapper">
@@ -40,14 +46,18 @@ export default function Collections() {
 
         <div className="collections-gallery">
           {visibleItems.map(item => (
-            <div key={item.id} className="collection-card">
+            <div
+              key={item.id}
+              className="collection-card"
+              onClick={() => handleClick(item.slug)}
+            >
               <img src={item.img} alt={item.title} />
               <div className="card-title">{item.title}</div>
             </div>
           ))}
         </div>
 
-        <button className="nav-arrow next" onClick={next} disabled={startIndex + visibleCount >= dummyData.length}>
+        <button className="nav-arrow next" onClick={next} disabled={startIndex + visibleCount >= collectionsData.length}>
           ›
         </button>
       </div>

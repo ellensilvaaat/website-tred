@@ -1,3 +1,6 @@
+// src/components/Footer/Footer.jsx
+
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Footer.css';
 import { FaInstagram, FaFacebook, FaLinkedin, FaPinterest } from 'react-icons/fa';
@@ -6,6 +9,8 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-bg-decor">
+        {/* If you have a decorative background image for the footer, add it here */}
+        {/* Example: <img src="/footer-bg.jpg" alt="Footer background" /> */}
       </div>
 
       <div className="footer-container">
@@ -40,20 +45,25 @@ export default function Footer() {
             <div className="footer-location">
               <h4>Contact us</h4>
               <p>(02) 8542 2249</p>
-              <p>Supa Centa Moore , Ground Floor<br />2a Todman Ave, Kensington</p>
+              <p>Supa Centa Moore, Ground Floor<br />2a Todman Ave, Kensington</p>
             </div>
           </div>
         </div>
 
         {/* Rodapé Legal */}
         <div className="footer-bottom">
-          <span>© 2025 TRED FLOORING. ALL RIGHTS RESERVED.</span>
-          <NavLink to="/privacy" className="footer-privacy">Privacy Policy</NavLink>
+          <span>© 2025 TRED FLOORING. ALL RIGHTS RESERVED.</span>
+          <div className="footer-links">
+            <NavLink to="/privacy">Privacy Policy</NavLink>
+            <NavLink to="/terms">Terms &amp; Conditions</NavLink>
+            <NavLink to="/disclaimer">Product &amp; Website Disclaimer</NavLink>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
+
 
 
 
