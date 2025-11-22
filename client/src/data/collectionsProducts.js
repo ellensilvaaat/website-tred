@@ -440,24 +440,4 @@ const collectionsProducts = {
   ],
 };
 
-export const extraProducts = [
-  {
-    id: 101,
-    name: 'Custom Rug Designer Range',
-    type: 'Custom Rugs',
-    specs: ['Handmade', 'Premium Wool', 'Bespoke Size'],
-    image: '/products/custom-rugs/rug-1.jpg',
-    collection: null
-  },
-  {
-    id: 102,
-    name: 'Outdoor Pavers Granite Series',
-    type: 'Pavers',
-    specs: ['Slip‑Resistant', 'Weather‑Proof', 'Low‑Maintenance'],
-    image: '/products/pavers/granite-series.jpg',
-    collection: null
-  }
-];
-
 export default collectionsProducts;
-export { collectionsProducts, extraProducts };
